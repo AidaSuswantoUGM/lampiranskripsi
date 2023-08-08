@@ -115,15 +115,16 @@ static void handler_events(UA_Client* client, UA_UInt32 subId, void* subContext,
 }
 
 static int mqttbutton(void* context, char* topic, int topiclen, MQTTClient_message* msg) {
-    UA_StatusCode rv;
-    char* pre = "OPC.";
-    UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "%s is pressed", topic);
-    /*UA_Boolean tmpb = true;
+    //UA_StatusCode rv;
+    char bfr[17];
+    snprintf(bfr, sizeof(bfr), "OPC.%s", topic);
+    UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "%s is pressed", bfr);
+    UA_Boolean tmpb = true;
     UA_WriteRequest wrq;
     UA_WriteRequest_init(&wrq);
     wrq.nodesToWrite = UA_WriteValue_new();
     wrq.nodesToWriteSize = 1;
-    wrq.nodesToWrite[0].nodeId = UA_NODEID_STRING(2, node);
+    wrq.nodesToWrite[0].nodeId = UA_NODEID_STRING(2, bfr);
     wrq.nodesToWrite[0].attributeId = UA_ATTRIBUTEID_VALUE;
     wrq.nodesToWrite[0].value.hasValue = true;
     wrq.nodesToWrite[0].value.value.type = &UA_TYPES[UA_TYPES_BOOLEAN];
@@ -141,7 +142,7 @@ static int mqttbutton(void* context, char* topic, int topiclen, MQTTClient_messa
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "error %d", wresp.responseHeader.serviceResult);
     }
     UA_WriteResponse_clear(&wresp);
-    UA_WriteRequest_clear(&wrq);*/
+    UA_WriteRequest_clear(&wrq);
     MQTTClient_freeMessage(&msg);
     return 1;
 }
