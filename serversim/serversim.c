@@ -40,6 +40,54 @@ int main(void) {
     UA_VariableAttributes_clear(&attr);
     UA_NodeId_clear(&myIntegerNodeId);
     UA_QualifiedName_clear(&myIntegerName);
+
+    UA_VariableAttributes attrdua = UA_VariableAttributes_default;
+    intku = 67;
+    UA_Variant_setScalarCopy(&attrdua.value, &intku, &UA_TYPES[UA_TYPES_INT32]);
+    attrdua.description = UA_LOCALIZEDTEXT_ALLOC("id-ID", "node ke-2");
+    attrdua.displayName = UA_LOCALIZEDTEXT_ALLOC("id-ID", "tes node 2");
+    attrdua.accessLevel = UA_ACCESSLEVELMASK_READ | UA_ACCESSLEVELMASK_WRITE;
+
+    UA_NodeId myIntegerNodeIdua = UA_NODEID_STRING_ALLOC(1, "node.kedua");
+    UA_QualifiedName myIntegerNamedua = UA_QUALIFIEDNAME_ALLOC(1, "ngetes node kedua");
+    UA_Server_addVariableNode(server, myIntegerNodeIdua, parentNodeId,
+        parentReferenceNodeId, myIntegerNamedua,
+        UA_NODEID_NULL, attrdua, NULL, NULL);
+    UA_VariableAttributes_clear(&attrdua);
+    UA_NodeId_clear(&myIntegerNodeIdua);
+    UA_QualifiedName_clear(&myIntegerNamedua);
+
+    UA_VariableAttributes attrtiga= UA_VariableAttributes_default;
+    UA_Boolean mba = false;
+    UA_Variant_setScalarCopy(&attrtiga.value, &mba, &UA_TYPES[UA_TYPES_BOOLEAN]);
+    attrtiga.description = UA_LOCALIZEDTEXT_ALLOC("id-ID", "node boolean");
+    attrtiga.displayName = UA_LOCALIZEDTEXT_ALLOC("id-ID", "tes node boolean");
+    attrtiga.accessLevel = UA_ACCESSLEVELMASK_READ | UA_ACCESSLEVELMASK_WRITE;
+
+    UA_NodeId boolnode = UA_NODEID_STRING_ALLOC(1, "node.boolsa");
+    UA_QualifiedName qboolnode = UA_QUALIFIEDNAME_ALLOC(1, "ngetes node boolean");
+    UA_Server_addVariableNode(server, boolnode, parentNodeId,
+        parentReferenceNodeId, qboolnode,
+        UA_NODEID_NULL, attrtiga, NULL, NULL);
+    UA_VariableAttributes_clear(&attrtiga);
+    UA_NodeId_clear(&boolnode);
+    UA_QualifiedName_clear(&qboolnode);
+
+    UA_VariableAttributes attrem = UA_VariableAttributes_default;
+    mba = true;
+    UA_Variant_setScalarCopy(&attrem.value, &mba, &UA_TYPES[UA_TYPES_BOOLEAN]);
+    attrem.description = UA_LOCALIZEDTEXT_ALLOC("id-ID", "node boolean dua");
+    attrem.displayName = UA_LOCALIZEDTEXT_ALLOC("id-ID", "tes node boolean dua");
+    attrem.accessLevel = UA_ACCESSLEVELMASK_READ | UA_ACCESSLEVELMASK_WRITE;
+
+    UA_NodeId boolnodedua = UA_NODEID_STRING_ALLOC(1, "node.booldu");
+    UA_QualifiedName qboolnodedu = UA_QUALIFIEDNAME_ALLOC(1, "ngetes node boolean dua");
+    UA_Server_addVariableNode(server, boolnodedua, parentNodeId,
+        parentReferenceNodeId, qboolnodedu,
+        UA_NODEID_NULL, attrem, NULL, NULL);
+    UA_VariableAttributes_clear(&attrem);
+    UA_NodeId_clear(&boolnodedua);
+    UA_QualifiedName_clear(&qboolnodedu);
     /*
     UA_Int32 vrn;
     UA_Variant smntr;
