@@ -1,5 +1,5 @@
 #include <open62541/client_config_default.h>
-//#include <open62541/client_highlevel.h>
+#include <open62541/client_highlevel.h>
 #include <open62541/plugin/log_stdout.h>
 #include<open62541/client_subscriptions.h>
 #include<MQTTClient.h>
@@ -96,12 +96,12 @@ static void handler_eventsbool(UA_Client* client, UA_UInt32 subId, void* subCont
 }
 
 static int mqttbutton(void* context, char* topic, int topiclen, MQTTClient_message* msg) {
-    UA_StatusCode rv;
+    //UA_StatusCode rv;
     char bfr[17];
     snprintf(bfr, sizeof(bfr), "OPC.%s", topic);
     UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "%s is pressed", bfr);
     UA_Boolean tmpb = true;
-    UA_WriteRequest wrq;
+    /*UA_WriteRequest wrq;
     UA_WriteRequest_init(&wrq);
     wrq.nodesToWrite = UA_WriteValue_new();
     wrq.nodesToWriteSize = 1;
@@ -123,7 +123,11 @@ static int mqttbutton(void* context, char* topic, int topiclen, MQTTClient_messa
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "error %d", wresp.responseHeader.serviceResult);
     }
     UA_WriteResponse_clear(&wresp);
-    UA_WriteRequest_clear(&wrq);
+    UA_WriteRequest_clear(&wrq);*/
+    UA_Variant* tmpvar = UA_Variant_new();
+    UA_Variant_setScalarCopy(tmpvar, &tmpb, &UA_TYPES[UA_TYPES_BOOLEAN]);
+    UA_Client_writeValueAttribute(context, UA_NODEID_STRING(1, "node.boolsa"), tmpvar);
+    UA_Variant_delete(tmpvar);
     MQTTClient_freeMessage(&msg);
     return 1;
 }
@@ -204,6 +208,8 @@ int main() {
     if (item_response_booldu.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring node.boolsa");
     }
+
+    UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_booldu, NULL, NULL, NULL);
 
     rc = MQTTClient_subscribe(mqttclient, tp_s_startstop, 0);
     if (rc != MQTTCLIENT_SUCCESS) {

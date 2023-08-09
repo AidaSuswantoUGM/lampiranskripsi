@@ -1,5 +1,5 @@
 #include <open62541/client_config_default.h>
-//#include <open62541/client_highlevel.h>
+#include <open62541/client_highlevel.h>
 #include <open62541/plugin/log_stdout.h>
 #include<open62541/client_subscriptions.h>
 #include<MQTTClient.h>
@@ -120,7 +120,7 @@ static int mqttbutton(void* context, char* topic, int topiclen, MQTTClient_messa
     snprintf(bfr, sizeof(bfr), "OPC.%s", topic);
     UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "%s is pressed", bfr);
     UA_Boolean tmpb = true;
-    UA_WriteRequest wrq;
+    /*UA_WriteRequest wrq;
     UA_WriteRequest_init(&wrq);
     wrq.nodesToWrite = UA_WriteValue_new();
     wrq.nodesToWriteSize = 1;
@@ -142,7 +142,15 @@ static int mqttbutton(void* context, char* topic, int topiclen, MQTTClient_messa
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "error %d", wresp.responseHeader.serviceResult);
     }
     UA_WriteResponse_clear(&wresp);
-    UA_WriteRequest_clear(&wrq);
+    UA_WriteRequest_clear(&wrq);*/
+    UA_Variant* tmpvar = UA_Variant_new();
+    UA_Variant_setScalarCopy(tmpvar, &tmpb, &UA_TYPES[UA_TYPES_BOOLEAN]);
+    UA_Client_writeValueAttribute(context, UA_NODEID_STRING(2, bfr), tmpvar);
+    UA_Variant_delete(tmpvar);
+    tmpb = false;
+    UA_Variant_setScalarCopy(tmpvar, &tmpb, &UA_TYPES[UA_TYPES_BOOLEAN]);
+    UA_Client_writeValueAttribute(context, UA_NODEID_STRING(2, bfr), tmpvar);
+    UA_Variant_delete(tmpvar);
     MQTTClient_freeMessage(&msg);
     return 1;
 }
