@@ -208,8 +208,8 @@ int main() {
     const UA_NodeId nodeId_hasil = UA_NODEID_STRING(2, "OPC.Pilot_Hasil");
     const UA_NodeId nodeId_V1 = UA_NODEID_STRING(2, "OPC.Pilot_V1");
     const UA_NodeId nodeId_V2 = UA_NODEID_STRING(2, "OPC.Pilot_V2");
-    const UA_NodeId nodeId_V3 = UA_NODEID_STRING(2, "OPC.Pilot_V3");
-    const UA_NodeId nodeId_V4 = UA_NODEID_STRING(2, "OPC.Pilot_V4");
+    //const UA_NodeId nodeId_V3 = UA_NODEID_STRING(2, "OPC.Pilot_V3");
+    //const UA_NodeId nodeId_V4 = UA_NODEID_STRING(2, "OPC.Pilot_V4");
     const UA_NodeId nodeId_paralel = UA_NODEID_STRING(2, "OPC.Pilot_Paralel");
     const UA_NodeId nodeId_serial = UA_NODEID_STRING(2, "OPC.Pilot_Serial");
     //
@@ -226,45 +226,45 @@ int main() {
     //
     const UA_NodeId nodeId_V_A1 = UA_NODEID_STRING(2, "OPC.V_A1");
     const UA_NodeId nodeId_V_A2 = UA_NODEID_STRING(2, "OPC.V_A2");
-    const UA_NodeId nodeId_V_A3 = UA_NODEID_STRING(2, "OPC.V_A3");
-    const UA_NodeId nodeId_V_A4 = UA_NODEID_STRING(2, "OPC.V_A4");
+    //const UA_NodeId nodeId_V_A3 = UA_NODEID_STRING(2, "OPC.V_A3");
+    //const UA_NodeId nodeId_V_A4 = UA_NODEID_STRING(2, "OPC.V_A4");
     //
     const UA_NodeId nodeId_V_B1 = UA_NODEID_STRING(2, "OPC.V_B1");
-    const UA_NodeId nodeId_V_B2 = UA_NODEID_STRING(2, "OPC.V_B2");
-    const UA_NodeId nodeId_V_B3 = UA_NODEID_STRING(2, "OPC.V_B3");
+    //const UA_NodeId nodeId_V_B2 = UA_NODEID_STRING(2, "OPC.V_B2");
+    //const UA_NodeId nodeId_V_B3 = UA_NODEID_STRING(2, "OPC.V_B3");
     //
     const UA_NodeId nodeId_V_C1 = UA_NODEID_STRING(2, "OPC.V_C1");
     const UA_NodeId nodeId_V_C2 = UA_NODEID_STRING(2, "OPC.V_C2");
-    const UA_NodeId nodeId_V_C3 = UA_NODEID_STRING(2, "OPC.V_C3");
-    const UA_NodeId nodeId_V_C4 = UA_NODEID_STRING(2, "OPC.V_C4");
+    //const UA_NodeId nodeId_V_C3 = UA_NODEID_STRING(2, "OPC.V_C3");
+    //const UA_NodeId nodeId_V_C4 = UA_NODEID_STRING(2, "OPC.V_C4");
     //
     const UA_NodeId nodeId_V_D1 = UA_NODEID_STRING(2, "OPC.V_D1");
     const UA_NodeId nodeId_V_D2 = UA_NODEID_STRING(2, "OPC.V_D2");
-    const UA_NodeId nodeId_V_D3 = UA_NODEID_STRING(2, "OPC.V_D3");
-    const UA_NodeId nodeId_V_D4 = UA_NODEID_STRING(2, "OPC.V_D4");
+    //const UA_NodeId nodeId_V_D3 = UA_NODEID_STRING(2, "OPC.V_D3");
+    //const UA_NodeId nodeId_V_D4 = UA_NODEID_STRING(2, "OPC.V_D4");
     //
     const UA_NodeId nodeId_V_E1 = UA_NODEID_STRING(2, "OPC.V_E1");
     const UA_NodeId nodeId_V_E2 = UA_NODEID_STRING(2, "OPC.V_E2");
-    const UA_NodeId nodeId_V_E3 = UA_NODEID_STRING(2, "OPC.V_E3");
-    const UA_NodeId nodeId_V_E4 = UA_NODEID_STRING(2, "OPC.V_E4");
+    //const UA_NodeId nodeId_V_E3 = UA_NODEID_STRING(2, "OPC.V_E3");
+    //const UA_NodeId nodeId_V_E4 = UA_NODEID_STRING(2, "OPC.V_E4");
     //
     const UA_NodeId nodeId_V_F1 = UA_NODEID_STRING(2, "OPC.V_F1");
     const UA_NodeId nodeId_V_F2 = UA_NODEID_STRING(2, "OPC.V_F2");
-    const UA_NodeId nodeId_V_F3 = UA_NODEID_STRING(2, "OPC.V_F3");
-    const UA_NodeId nodeId_V_F4 = UA_NODEID_STRING(2, "OPC.V_F4");
+    //const UA_NodeId nodeId_V_F3 = UA_NODEID_STRING(2, "OPC.V_F3");
+    //const UA_NodeId nodeId_V_F4 = UA_NODEID_STRING(2, "OPC.V_F4");
     //
     const UA_NodeId nodeId_V_G2 = UA_NODEID_STRING(2, "OPC.V_G2");
-    const UA_NodeId nodeId_V_G3 = UA_NODEID_STRING(2, "OPC.V_G3");
-    const UA_NodeId nodeId_V_G4 = UA_NODEID_STRING(2, "OPC.V_G4");
+    //const UA_NodeId nodeId_V_G3 = UA_NODEID_STRING(2, "OPC.V_G3");
+    //const UA_NodeId nodeId_V_G4 = UA_NODEID_STRING(2, "OPC.V_G4");
     //
     const UA_NodeId nodeId_V_H1 = UA_NODEID_STRING(2, "OPC.V_H1");
     const UA_NodeId nodeId_V_H2 = UA_NODEID_STRING(2, "OPC.V_H2");
-    const UA_NodeId nodeId_V_H3 = UA_NODEID_STRING(2, "OPC.V_H3");
-    const UA_NodeId nodeId_V_H4 = UA_NODEID_STRING(2, "OPC.V_H4");
+    //const UA_NodeId nodeId_V_H3 = UA_NODEID_STRING(2, "OPC.V_H3");
+    //const UA_NodeId nodeId_V_H4 = UA_NODEID_STRING(2, "OPC.V_H4");
     //
     const UA_NodeId nodeId_V_S1 = UA_NODEID_STRING(2, "OPC.V_S1");
-    const UA_NodeId nodeId_V_S2 = UA_NODEID_STRING(2, "OPC.V_S2");
-    const UA_NodeId nodeId_V_S3 = UA_NODEID_STRING(2, "OPC.V_S3");
+    //const UA_NodeId nodeId_V_S2 = UA_NODEID_STRING(2, "OPC.V_S2");
+    //const UA_NodeId nodeId_V_S3 = UA_NODEID_STRING(2, "OPC.V_S3");
     //
 
     //create subscription to opc server
@@ -315,7 +315,7 @@ int main() {
     if (item_response_v2.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V2");
     }
-
+    /*
     UA_MonitoredItemCreateRequest item_v3 = UA_MonitoredItemCreateRequest_default(nodeId_V3);
     UA_MonitoredItemCreateResult item_response_v3 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_v3, (void*)tp_v3, handler_events, NULL);
     if (item_response_v3.statusCode == UA_STATUSCODE_GOOD) {
@@ -327,7 +327,7 @@ int main() {
     if (item_response_v4.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V4");
     }
-
+    */
     UA_MonitoredItemCreateRequest item_paralel = UA_MonitoredItemCreateRequest_default(nodeId_paralel);
     UA_MonitoredItemCreateResult item_response_paralel = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_paralel, (void*)tp_paralel, handler_events, NULL);
     if (item_response_paralel.statusCode == UA_STATUSCODE_GOOD) {
@@ -352,7 +352,7 @@ int main() {
     if (item_response_V_A2.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A2");
     }
-
+    /*
     UA_MonitoredItemCreateRequest item_V_A3 = UA_MonitoredItemCreateRequest_default(nodeId_V_A3);
     UA_MonitoredItemCreateResult item_response_V_A3 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_A3, (void*)tp_v_a3, handler_events, NULL);
     if (item_response_V_A3.statusCode == UA_STATUSCODE_GOOD) {
@@ -364,14 +364,14 @@ int main() {
     if (item_response_V_A4.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A4");
     }
-
+    */
     //
     UA_MonitoredItemCreateRequest item_V_B1 = UA_MonitoredItemCreateRequest_default(nodeId_V_B1);
     UA_MonitoredItemCreateResult item_response_V_B1 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_B1, (void*)tp_v_b1, handler_events, NULL);
     if (item_response_V_B1.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A1");
     }
-
+    /*
     UA_MonitoredItemCreateRequest item_V_B2 = UA_MonitoredItemCreateRequest_default(nodeId_V_B2);
     UA_MonitoredItemCreateResult item_response_V_B2 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_B2, (void*)tp_v_b2, handler_events, NULL);
     if (item_response_V_B2.statusCode == UA_STATUSCODE_GOOD) {
@@ -383,7 +383,7 @@ int main() {
     if (item_response_V_B3.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A3");
     }
-
+    */
     //
     UA_MonitoredItemCreateRequest item_V_C1 = UA_MonitoredItemCreateRequest_default(nodeId_V_C1);
     UA_MonitoredItemCreateResult item_response_V_C1 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_C1, (void*)tp_v_c1, handler_events, NULL);
@@ -396,7 +396,7 @@ int main() {
     if (item_response_V_C2.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A2");
     }
-
+    /*
     UA_MonitoredItemCreateRequest item_V_C3 = UA_MonitoredItemCreateRequest_default(nodeId_V_C3);
     UA_MonitoredItemCreateResult item_response_V_C3 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_C3, (void*)tp_v_c3, handler_events, NULL);
     if (item_response_V_C3.statusCode == UA_STATUSCODE_GOOD) {
@@ -408,7 +408,7 @@ int main() {
     if (item_response_V_C4.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A4");
     }
-
+    */
     //
     UA_MonitoredItemCreateRequest item_V_D1 = UA_MonitoredItemCreateRequest_default(nodeId_V_D1);
     UA_MonitoredItemCreateResult item_response_V_D1 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_D1, (void*)tp_v_d1, handler_events, NULL);
@@ -421,7 +421,7 @@ int main() {
     if (item_response_V_D2.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A2");
     }
-
+    /*
     UA_MonitoredItemCreateRequest item_V_D3 = UA_MonitoredItemCreateRequest_default(nodeId_V_A3);
     UA_MonitoredItemCreateResult item_response_V_D3 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_D3, (void*)tp_v_d3, handler_events, NULL);
     if (item_response_V_D3.statusCode == UA_STATUSCODE_GOOD) {
@@ -433,7 +433,7 @@ int main() {
     if (item_response_V_D4.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A4");
     }
-
+    */
     //
     UA_MonitoredItemCreateRequest item_V_E1 = UA_MonitoredItemCreateRequest_default(nodeId_V_E1);
     UA_MonitoredItemCreateResult item_response_V_E1 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_E1, (void*)tp_v_e1, handler_events, NULL);
@@ -446,7 +446,7 @@ int main() {
     if (item_response_V_E2.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A2");
     }
-
+    /*
     UA_MonitoredItemCreateRequest item_V_E3 = UA_MonitoredItemCreateRequest_default(nodeId_V_E3);
     UA_MonitoredItemCreateResult item_response_V_E3 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_E3, (void*)tp_v_e3, handler_events, NULL);
     if (item_response_V_E3.statusCode == UA_STATUSCODE_GOOD) {
@@ -458,7 +458,7 @@ int main() {
     if (item_response_V_E4.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A4");
     }
-
+    */
     //
     UA_MonitoredItemCreateRequest item_V_F1 = UA_MonitoredItemCreateRequest_default(nodeId_V_F1);
     UA_MonitoredItemCreateResult item_response_V_F1 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_F1, (void*)tp_v_f1, handler_events, NULL);
@@ -471,7 +471,7 @@ int main() {
     if (item_response_V_F2.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A2");
     }
-
+    /*
     UA_MonitoredItemCreateRequest item_V_F3 = UA_MonitoredItemCreateRequest_default(nodeId_V_F3);
     UA_MonitoredItemCreateResult item_response_V_F3 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_F3, (void*)tp_v_f3, handler_events, NULL);
     if (item_response_V_F3.statusCode == UA_STATUSCODE_GOOD) {
@@ -483,14 +483,14 @@ int main() {
     if (item_response_V_F4.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A4");
     }
-
+    */
     //
     UA_MonitoredItemCreateRequest item_V_G2 = UA_MonitoredItemCreateRequest_default(nodeId_V_G2);
     UA_MonitoredItemCreateResult item_response_V_G2 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_G2, (void*)tp_v_g2, handler_events, NULL);
     if (item_response_V_G2.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A2");
     }
-
+    /*
     UA_MonitoredItemCreateRequest item_V_G3 = UA_MonitoredItemCreateRequest_default(nodeId_V_G3);
     UA_MonitoredItemCreateResult item_response_V_G3 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_G3, (void*)tp_v_g3, handler_events, NULL);
     if (item_response_V_G3.statusCode == UA_STATUSCODE_GOOD) {
@@ -502,7 +502,7 @@ int main() {
     if (item_response_V_G4.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A4");
     }
-
+    */
     //
     UA_MonitoredItemCreateRequest item_V_H1 = UA_MonitoredItemCreateRequest_default(nodeId_V_H1);
     UA_MonitoredItemCreateResult item_response_V_H1 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_H1, (void*)tp_v_h1, handler_events, NULL);
@@ -515,7 +515,7 @@ int main() {
     if (item_response_V_H2.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A2");
     }
-
+    /*
     UA_MonitoredItemCreateRequest item_V_H3 = UA_MonitoredItemCreateRequest_default(nodeId_V_H3);
     UA_MonitoredItemCreateResult item_response_V_H3 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_H3, (void*)tp_v_h3, handler_events, NULL);
     if (item_response_V_H3.statusCode == UA_STATUSCODE_GOOD) {
@@ -527,14 +527,14 @@ int main() {
     if (item_response_V_H4.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A4");
     }
-
+    */
     //
     UA_MonitoredItemCreateRequest item_V_S1 = UA_MonitoredItemCreateRequest_default(nodeId_V_S1);
     UA_MonitoredItemCreateResult item_response_V_S1 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_S1, (void*)tp_v_s1, handler_events, NULL);
     if (item_response_V_S1.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A1");
     }
-
+    /*
     UA_MonitoredItemCreateRequest item_V_S2 = UA_MonitoredItemCreateRequest_default(nodeId_V_S2);
     UA_MonitoredItemCreateResult item_response_V_S2 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_S2, (void*)tp_v_s2, handler_events, NULL);
     if (item_response_V_S2.statusCode == UA_STATUSCODE_GOOD) {
@@ -545,7 +545,7 @@ int main() {
     UA_MonitoredItemCreateResult item_response_V_S3 = UA_Client_MonitoredItems_createDataChange(opcclient, subId, UA_TIMESTAMPSTORETURN_BOTH, item_V_S3, (void*)tp_v_s3, handler_events, NULL);
     if (item_response_V_S3.statusCode == UA_STATUSCODE_GOOD) {
         UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "monitoring OPC.Pilot_V_A3");
-    }
+    }*/
     //end of subs
 
     rc = MQTTClient_subscribe(mqttclient, tp_s_startstop, 0);
