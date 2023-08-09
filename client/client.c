@@ -23,8 +23,8 @@ const char* tp_serial = "pilot_serial";
 const char* tp_paralel = "pilot_paralel";
 const char* tp_v1 = "pilot_v1";
 const char* tp_v2 = "pilot_v2";
-const char* tp_v3 = "pilot_v3";
-const char* tp_v4 = "pilot_v4";
+//const char* tp_v3 = "pilot_v3";
+//const char* tp_v4 = "pilot_v4";
 const char* tp_hasil = "pilot_hasil";
 //
 const char* tp_s_startstop = "SW_StartStop";
@@ -34,51 +34,51 @@ const char* tp_s_serial = "SW_Serial";
 const char* tp_s_paralel = "SW_Paralel";
 const char* tp_s_v1 = "SW_V1";
 const char* tp_s_v2 = "SW_V2";
-const char* tp_s_v3 = "SW_V3";
-const char* tp_s_v4 = "SW_V4";
+//const char* tp_s_v3 = "SW_V3";
+//const char* tp_s_v4 = "SW_V4";
 const char* tp_s_hasil = "SW_Hasil";
 //
 const char* tp_v_a1 = "pilot_v_a1";
 const char* tp_v_a2 = "pilot_v_a2";
-const char* tp_v_a3 = "pilot_v_a3";
-const char* tp_v_a4 = "pilot_v_a4";
+//const char* tp_v_a3 = "pilot_v_a3";
+//const char* tp_v_a4 = "pilot_v_a4";
 //
 const char* tp_v_b1 = "pilot_v_b1";
-const char* tp_v_b2 = "pilot_v_b2";
-const char* tp_v_b3 = "pilot_v_b3";
+//const char* tp_v_b2 = "pilot_v_b2";
+//const char* tp_v_b3 = "pilot_v_b3";
 //
 const char* tp_v_c1 = "pilot_v_c1";
 const char* tp_v_c2 = "pilot_v_c2";
-const char* tp_v_c3 = "pilot_v_c3";
-const char* tp_v_c4 = "pilot_v_c4";
+//const char* tp_v_c3 = "pilot_v_c3";
+//const char* tp_v_c4 = "pilot_v_c4";
 //
 const char* tp_v_d1 = "pilot_v_d1";
 const char* tp_v_d2 = "pilot_v_d2";
-const char* tp_v_d3 = "pilot_v_d3";
-const char* tp_v_d4 = "pilot_v_d4";
+//const char* tp_v_d3 = "pilot_v_d3";
+//const char* tp_v_d4 = "pilot_v_d4";
 //
 const char* tp_v_e1 = "pilot_v_e1";
 const char* tp_v_e2 = "pilot_v_e2";
-const char* tp_v_e3 = "pilot_v_e3";
-const char* tp_v_e4 = "pilot_v_e4";
+//const char* tp_v_e3 = "pilot_v_e3";
+//const char* tp_v_e4 = "pilot_v_e4";
 //
 const char* tp_v_f1 = "pilot_v_f1";
 const char* tp_v_f2 = "pilot_v_f2";
-const char* tp_v_f3 = "pilot_v_f3";
-const char* tp_v_f4 = "pilot_v_f4";
+//const char* tp_v_f3 = "pilot_v_f3";
+//const char* tp_v_f4 = "pilot_v_f4";
 //
 const char* tp_v_g2 = "pilot_v_g2";
-const char* tp_v_g3 = "pilot_v_g3";
-const char* tp_v_g4 = "pilot_v_g4";
+//const char* tp_v_g3 = "pilot_v_g3";
+//const char* tp_v_g4 = "pilot_v_g4";
 //
 const char* tp_v_h1 = "pilot_v_h1";
 const char* tp_v_h2 = "pilot_v_h2";
-const char* tp_v_h3 = "pilot_v_h3";
-const char* tp_v_h4 = "pilot_v_h4";
+//const char* tp_v_h3 = "pilot_v_h3";
+//const char* tp_v_h4 = "pilot_v_h4";
 //
 const char* tp_v_s1 = "pilot_v_s1";
-const char* tp_v_s2 = "pilot_v_s2";
-const char* tp_v_s3 = "pilot_v_s3";
+//const char* tp_v_s2 = "pilot_v_s2";
+//const char* tp_v_s3 = "pilot_v_s3";
 //end of topic
 
 static UA_Boolean opcrun = true;
