@@ -146,11 +146,11 @@ static int mqttbutton(void* context, char* topic, int topiclen, MQTTClient_messa
     UA_Variant* tmpvar = UA_Variant_new();
     UA_Variant_setScalarCopy(tmpvar, &tmpb, &UA_TYPES[UA_TYPES_BOOLEAN]);
     UA_Client_writeValueAttribute(context, UA_NODEID_STRING(2, bfr), tmpvar);
-    UA_Variant_delete(tmpvar);
+    //UA_Variant_delete(tmpvar);
     tmpb = false;
     UA_Variant_setScalarCopy(tmpvar, &tmpb, &UA_TYPES[UA_TYPES_BOOLEAN]);
     UA_Client_writeValueAttribute(context, UA_NODEID_STRING(2, bfr), tmpvar);
-    UA_Variant_delete(tmpvar);
+    //UA_Variant_delete(tmpvar);
     MQTTClient_freeMessage(&msg);
     return 1;
 }
