@@ -6,6 +6,10 @@
 
 #pragma comment(lib, "ws2_32.lib")
 #pragma comment(lib, "iphlpapi.lib")
+#pragma comment(lib, "open62541.lib")
+#pragma comment(lib, "paho-mqtt3c.lib")
+//open62541.lib
+//paho - mqtt3c.lib
 
 const char* opcusrn = "testt";
 const char* opcpswd = "1234";
@@ -347,19 +351,50 @@ int main() {
 
     rc = MQTTClient_subscribe(mqttclient, tp_s_startstop, 0);
     if (rc != MQTTCLIENT_SUCCESS) {
-        UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "failed to subscribe to MQTT SW_StartStop %d\n", rc);
+        UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "failed to subscribe to MQTT %s %d\n", tp_s_startstop, rc);
+    }
+    rc = MQTTClient_subscribe(mqttclient, tp_s_downflow, 0);
+    if (rc != MQTTCLIENT_SUCCESS) {
+        UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "failed to subscribe to MQTT %s %d\n", tp_s_downflow, rc);
+    }
+    rc = MQTTClient_subscribe(mqttclient, tp_s_upflow, 0);
+    if (rc != MQTTCLIENT_SUCCESS) {
+        UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "failed to subscribe to MQTT %s %d\n", tp_s_upflow, rc);
+    }
+    rc = MQTTClient_subscribe(mqttclient, tp_s_serial, 0);
+    if (rc != MQTTCLIENT_SUCCESS) {
+        UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "failed to subscribe to MQTT %s %d\n", tp_s_serial, rc);
+    }
+    rc = MQTTClient_subscribe(mqttclient, tp_s_paralel, 0);
+    if (rc != MQTTCLIENT_SUCCESS) {
+        UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "failed to subscribe to MQTT %s %d\n", tp_s_paralel, rc);
     }
     rc = MQTTClient_subscribe(mqttclient, tp_s_v1, 0);
     if (rc != MQTTCLIENT_SUCCESS) {
-        UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "failed to subscribe to MQTT SW_V1 %d\n", rc);
+        UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "failed to subscribe to MQTT %s %d\n", tp_s_v1, rc);
     }
+    rc = MQTTClient_subscribe(mqttclient, tp_s_v2, 0);
+    if (rc != MQTTCLIENT_SUCCESS) {
+        UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "failed to subscribe to MQTT %s %d\n", tp_s_v2, rc);
+    }
+    rc = MQTTClient_subscribe(mqttclient, tp_s_hasil, 0);
+    if (rc != MQTTCLIENT_SUCCESS) {
+        UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_USERLAND, "failed to subscribe to MQTT %s %d\n", tp_s_hasil, rc);
+    }
+
 
     while (opcrun) {
         retval = UA_Client_run_iterate(opcclient, 1000);
     }
 
-    rc = MQTTClient_unsubscribe(mqttclient, tp_s_startstop);
-    rc = MQTTClient_unsubscribe(mqttclient, tp_s_v1);
+    MQTTClient_unsubscribe(mqttclient, tp_s_startstop);
+    MQTTClient_unsubscribe(mqttclient, tp_s_downflow);
+    MQTTClient_unsubscribe(mqttclient, tp_s_upflow);
+    MQTTClient_unsubscribe(mqttclient, tp_s_serial);
+    MQTTClient_unsubscribe(mqttclient, tp_s_paralel);
+    MQTTClient_unsubscribe(mqttclient, tp_s_v1);
+    MQTTClient_unsubscribe(mqttclient, tp_s_v2);
+    MQTTClient_unsubscribe(mqttclient, tp_s_hasil);
     /* Clean up */
     MQTTClient_disconnect(mqttclient, 10000);
     MQTTClient_destroy(&mqttclient);
