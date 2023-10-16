@@ -1,0 +1,169 @@
+[
+    {
+        "id": "ad2aa02082a0db51",
+        "type": "inject",
+        "z": "35254a2ff7f93a34",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 300,
+        "wires": [
+            [
+                "2e510533d5b01e13"
+            ]
+        ]
+    },
+    {
+        "id": "3a3de7d4bebdb26a",
+        "type": "modbus-flex-getter",
+        "z": "35254a2ff7f93a34",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "server": "753b87ebe0158356",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 650,
+        "y": 300,
+        "wires": [
+            [],
+            [
+                "6f71c89c47fb5468"
+            ]
+        ]
+    },
+    {
+        "id": "2e510533d5b01e13",
+        "type": "function",
+        "z": "35254a2ff7f93a34",
+        "name": "register(%MW)",
+        "func": "msg.payload={\n    'fc': 3,\n    'unitid': 1,\n    'address': 1,\n    'quantity': 1}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 300,
+        "wires": [
+            [
+                "3a3de7d4bebdb26a"
+            ]
+        ]
+    },
+    {
+        "id": "6f71c89c47fb5468",
+        "type": "function",
+        "z": "35254a2ff7f93a34",
+        "name": "pilot_start",
+        "func": "var hasil = msg.payload.data[0];\nvar bin = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];\nfor (let i = 0; i < 16; i++) {\n    if (hasil >= 2 ** (16 - 1 - i)) {\n        bin[i] = 1;\n        hasil = hasil - 2 ** (16 - 1 - i);\n    }\n}\n\nmsg.payload = bin[15];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 300,
+        "wires": [
+            [
+                "5f8811b5cca88a85"
+            ]
+        ]
+    },
+    {
+        "id": "5f8811b5cca88a85",
+        "type": "mqtt out",
+        "z": "35254a2ff7f93a34",
+        "name": "",
+        "topic": "pilot_startstop",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a2b55614535f9b5c",
+        "x": 980,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "753b87ebe0158356",
+        "type": "modbus-client",
+        "name": "169.254.181.200",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": true,
+        "failureLogEnabled": true,
+        "tcpHost": "169.254.181.200",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "a2b55614535f9b5c",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
